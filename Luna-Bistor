@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luna Bistro | Restaurant</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      Luna<span>Bistro</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#special">Specials</a>
+      <a href="#contact">Contact</a>
+      <button class="nav-button" data-open-booking>
+        Book a Table
+      </button>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+
+  <div class="container hero-grid">
+
+    <div class="hero-text">
+
+      <p class="eyebrow">WELCOME TO LUNA BISTRO</p>
+
+      <h1>
+        Good food.
+        <span>Beautiful moments.</span>
+      </h1>
+
+      <p class="hero-description">
+        A modern restaurant in Cairo serving fresh ingredients,
+        comforting flavors, and memorable dining experiences.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#menu" class="btn primary">
+          Explore Menu
+        </a>
+
+        <button class="btn secondary" data-open-booking>
+          Reserve a Table
+        </button>
+
+      </div>
+
+      <div class="stats">
+
+        <div>
+          <strong>4.9</strong>
+          <span>Guest Rating</span>
+        </div>
+
+        <div>
+          <strong>8+</strong>
+          <span>Signature Dishes</span>
+        </div>
+
+        <div>
+          <strong>7</strong>
+          <span>Days Open</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="plate">
+
+        <div class="food food-one"></div>
+        <div class="food food-two"></div>
+        <div class="food food-three"></div>
+        <div class="food food-four"></div>
+
+      </div>
+
+      <div class="floating-card">
+
+        <span>Chef's Pick</span>
+
+        <strong>Truffle Pasta</strong>
+
+        <small>Fresh pasta · Parmesan · Truffle</small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="menu-section" id="menu">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">OUR MENU</p>
+
+        <h2>Made with care.</h2>
+      </div>
+
+      <p>
+        From light starters to satisfying mains,
+        every plate is prepared with fresh ingredients.
+      </p>
+
+    </div>
+
+
+    <div class="filters">
+
+      <button class="filter active" data-category="all">
+        All
+      </button>
+
+      <button class="filter" data-category="starters">
+        Starters
+      </button>
+
+      <button class="filter" data-category="mains">
+        Mains
+      </button>
+
+      <button class="filter" data-category="pizza">
+        Pizza
+      </button>
+
+      <button class="filter" data-category="desserts">
+        Desserts
+      </button>
+
+      <button class="filter" data-category="drinks">
+        Drinks
+      </button>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+      <article class="menu-card" data-category="starters">
+
+        <div class="dish-image burrata">
+          🥗
+        </div>
+
+        <div class="dish-content">
+
+          <div class="dish-title">
+            <h3>Garden Burrata</h3>
+            <strong>$12</strong>
+          </div>
+
+          <p>
+            Creamy burrata, tomatoes, basil,
+            olive oil and toasted bread.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="menu-card" data-category="starters">
+
+        <div class="dish-image shrimp">
+          🍤
+        </div>
+
+        <div class="dish-content">
+
+          <div class="dish-title">
+            <h3>Garlic Shrimp</h3>
+            <strong>$14</strong>
+          </div>
+
+          <p>
+            Juicy shrimp, garlic butter,
+            lemon and fresh herbs.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="menu-card" data-category="mains">
+
+        <div class="dish-image pasta">
+          🍝
+        </div>
+
+        <div class="dish-content">
+
+          <div class="dish-title">
+            <h3>Truffle Pasta</h3>
+            <strong>$18</strong>
+          </div>
+
+          <p>
+            Fresh pasta, creamy parmesan sauce
+            and aromatic truffle.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="menu-card" data-category="mains">
+
+        <div class="dish-image steak">
+          🥩
+        </div>
+
+        <div class="dish-content">
+
+          <div class="dish-title">
+            <h3>Grilled Steak</h3>
+            <strong>$26</strong>
+          </div>
+
+          <p>
+            Grilled beef, roasted vegetables
+            and
+:root {
+  --bg: #10251d;
+  --bg-light: #17372b;
+  --surface: #f7f2e8;
+  --cream: #fffaf0;
+  --gold: #d8a84e;
+  --text: #17231e;
+  --muted: #69746e;
+  --white: #ffffff;
+  --border: rgba(23, 35, 30, 0.12);
+  --shadow: 0 20px 50px rgba(16, 37, 29, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 250, 240, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.nav-button {
+  border: 0;
+  background: var(--bg);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  font
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+const filters = document.querySelectorAll(".filter");
+const menuCards = document.querySelectorAll(".menu-card");
+
+const modal = document.getElementById("bookingModal");
+const modalClose = document.getElementById("modalClose");
+
+const bookingForm = document.getElementById("bookingForm");
+const formMessage = document.getElementById("formMessage");
+
+const dateInput = document.getElementById("date");
+const backTop = document.getElementById("backTop");
+
+
+// MOBILE MENU
+
+menuToggle.addEventListener("click", () => {
+
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+});
+
+
+// CLOSE MOBILE MENU AFTER CLICKING A LINK
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navLinks.classList.remove("open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
