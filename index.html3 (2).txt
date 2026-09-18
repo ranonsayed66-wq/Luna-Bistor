@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Bistro | Restaurant</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf0;
+    color:#17231e;
+    line-height:1.6;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fffaf0;
+    border-bottom:1px solid #ddd6c8;
+}
+
+.nav{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#10251d;
+}
+
+.logo span{
+    color:#d8a84e;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+nav a{
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d8a84e;
+}
+
+.book-button{
+    border:0;
+    background:#10251d;
+    color:white;
+    padding:11px 18px;
+    border-radius:25px;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.eyebrow{
+    color:#d8a84e;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,75px);
+    line-height:1;
+    color:#10251d;
+}
+
+.hero h1 span{
+    display:block;
+    color:#d8a84e;
+}
+
+.hero-text{
+    color:#69746e;
+    font-size:17px;
+    margin:25px 0;
+    max-width:520px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:0;
+    border-radius:30px;
+    padding:14px 22px;
+    font-weight:bold;
+}
+
+.primary{
+    background:#10251d;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#10251d;
+    border:1px solid #bdb7aa;
+}
+
+.primary:hover{
+    background:#17372b;
+}
+
+.secondary:hover{
+    background:#f3eee4;
+}
+
+.stats{
+    display:flex;
+    gap:35px;
+    margin-top:35px;
+}
+
+.stats strong{
+    display:block;
+    font-size:25px;
+}
+
+.stats small{
+    color:#69746e;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+    min-height:430px;
+    border-radius:30px;
+    background:#10251d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.plate{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:#eee3cf;
+    border:14px solid white;
+    position:relative;
+    box-shadow:0 25px 50px rgba(0,0,0,.3);
+}
+
+.food{
+    position:absolute;
+    border-radius:50%;
+}
+
+.food1{
+    width:80px;
+    height:80px;
+    background:#914a30;
+    top:55px;
+    left:50px;
+}
+
+.food2{
+    width:60px;
+    height:60px;
+    background:#c78b42;
+    top:55px;
+    right:45px;
+}
+
+.food3{
+    width:70px;
+    height:70px;
+    background:#55713e;
+    bottom:40px;
+    left:90px;
+}
+
+.food4{
+    width:40px;
+    height:40px;
+    background:#d8a84e;
+    bottom:50px;
+    right:55px;
+}
+
+.chef-card{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    background:white;
+    padding:16px;
+    border-radius:15px;
+}
+
+.chef-card span{
+    color:#d8a84e;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.chef-card strong{
+    display:block;
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#10251d;
+}
+
+/* MENU */
+
+.menu-section{
+    background:#f5f0e7;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter{
+    padding:10px 17px;
+    border-radius:25px;
+    border:1px solid #d3ccbf;
+    background:transparent;
+}
+
+.filter.active,
+.filter:hover{
+    background:#10251d;
+    color:white;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.2s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.menu-card.hide{
+    display:none;
+}
+
+.food-picture{
+    height:170px;
+    display:flex;
+    justify-content:center;
